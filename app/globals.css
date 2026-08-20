@@ -145,15 +145,15 @@ p{margin:0 0 18px}
 .footer-logo{width:230px;height:auto;object-fit:contain;display:block;background:transparent}
 .footer-copy{font-size:13px;opacity:.9}
 .footer-bottom{border-top:1px solid rgba(255,255,255,.35);margin-top:38px;padding-top:18px;text-align:center;font-size:12px}
-.facebook-link{display:inline-flex!important;align-items:center;justify-content:center;width:38px;height:38px;margin-top:5px;border-radius:50%;text-decoration:none!important}
-.facebook-icon{display:inline-grid;place-items:center;width:34px;height:34px;border-radius:50%;transition:background .22s ease,transform .22s ease}
-.facebook-icon svg{width:22px;height:22px}
-.facebook-icon svg path{fill:currentColor}
-.footer-facebook-icon{color:#fff;border:1px solid rgba(255,255,255,.7)}
-.facebook-link:hover .footer-facebook-icon{background:#fff;color:#1877F2;transform:translateY(-1px)}
-.contact-facebook{align-self:flex-start}
-.contact-facebook-icon{margin-top:4px;color:#fff;background:#1877F2}
-.contact-facebook:hover .contact-facebook-icon{transform:translateY(-1px) scale(1.04);background:#0f68d7}
+
+
+
+
+
+.facebook-link:hover 
+
+
+.contact-facebook:hover 
 .scroll-top{position:fixed;right:22px;bottom:22px;width:48px;height:48px;border:0;border-radius:50%;background:var(--navy);color:#fff;font-size:24px;cursor:pointer;box-shadow:0 12px 30px rgba(8,45,83,.25);z-index:60}
 @media(max-width:980px){
   .topbar-inner{justify-content:flex-start;overflow:auto;white-space:nowrap}
@@ -251,4 +251,60 @@ p{margin:0 0 18px}
 .webfit-credit:focus-visible{
   opacity:1;
   color:rgba(255,255,255,.72);
+}
+
+.facebook-link{
+  display:inline-flex!important;
+  align-items:center;
+  justify-content:center;
+  width:40px;
+  height:40px;
+  margin-top:5px;
+  border-radius:50%;
+  text-decoration:none!important;
+}
+
+.facebook-icon{
+  display:inline-grid;
+  place-items:center;
+  width:36px;
+  height:36px;
+  border-radius:50%;
+  background:#1877F2;
+  color:#fff;
+  box-shadow:0 2px 8px rgba(24,119,242,.18);
+  transition:background .2s ease,transform .2s ease,box-shadow .2s ease;
+}
+
+.facebook-icon svg{
+  width:23px;
+  height:23px;
+  display:block;
+}
+
+.facebook-icon svg path{
+  fill:#fff!important;
+}
+
+.footer-facebook-icon,
+.contact-facebook-icon{
+  background:#1877F2;
+  color:#fff;
+  border:0;
+  margin-top:4px;
+}
+
+.facebook-link:hover .facebook-icon,
+.facebook-link:focus-visible .facebook-icon,
+.contact-facebook:hover .facebook-icon,
+.contact-facebook:focus-visible .facebook-icon{
+  background:#166FE5;
+  color:#fff;
+  transform:translateY(-1px);
+  box-shadow:0 4px 12px rgba(24,119,242,.28);
+}
+
+.contact-facebook{
+  align-self:flex-start;
+  text-decoration:none;
 }
