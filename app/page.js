@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import BookingBar from '@/components/BookingBar';
+import MinorBookingNotice from '@/components/MinorBookingNotice';
 
 const BOOKING_URL = 'https://apac.dentalhub.online/soe/new/%20?pid=NZWCH01';
 
@@ -30,6 +31,7 @@ export default function Home() {
               <a className="button" href={BOOKING_URL} target="_blank" rel="noopener noreferrer">Book Online 24/7</a>
               <a className="text-link" href="tel:+6498372915">Call (09) 837-2915</a>
             </div>
+            <MinorBookingNotice />
             <div className="hero-trust">
               <span>7 day clinic</span><span>ACC registered</span><span>Lincoln Road, Henderson</span>
             </div>

@@ -1,6 +1,7 @@
 import PageHero from '@/components/PageHero';
 import ContactForm from '@/components/ContactForm';
 import FacebookIcon from '@/components/FacebookIcon';
+import MinorBookingNotice from '@/components/MinorBookingNotice';
 
 export const metadata = {
   title: 'Contact Us',
@@ -45,6 +46,7 @@ export default function ContactPage() {
               <h2>How can we help?</h2>
               <p>For appointments, the fastest option is our 24/7 online booking service.</p>
               <a className="button" href="https://apac.dentalhub.online/soe/new/%20?pid=NZWCH01" target="_blank" rel="noopener noreferrer">Book Online 24/7</a>
+              <MinorBookingNotice />
             </div>
             <ContactForm />
           </div>

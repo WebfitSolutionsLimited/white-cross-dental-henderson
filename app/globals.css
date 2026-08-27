@@ -101,6 +101,14 @@ p{margin:0 0 18px}
 .booking-bar h2{color:#fff;margin:0}
 .booking-actions{display:flex;align-items:center;gap:22px}
 .phone-cta{color:#fff;font-weight:900}
+.booking-action-wrap{max-width:560px}
+.minor-booking-notice{margin:14px 0 0;padding:12px 14px;border-left:3px solid var(--primary);border-radius:0 8px 8px 0;background:rgba(13,126,191,.07);color:var(--muted);font-size:12px;line-height:1.55}
+.minor-booking-notice strong{color:var(--navy)}
+.minor-booking-notice.light{background:rgba(255,255,255,.10);border-left-color:#fff;color:rgba(255,255,255,.86)}
+.minor-booking-notice.light strong{color:#fff}
+.hero-copy .minor-booking-notice{max-width:650px;margin-top:18px}
+.form-heading .minor-booking-notice{max-width:600px}
+
 .page-hero{background:linear-gradient(rgba(8,45,83,.90),rgba(8,45,83,.90)),url('/images/hero.jpg') center/cover;padding:90px 0}
 .page-hero h1{color:#fff;font-size:52px;margin:0}
 .about-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
