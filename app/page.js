@@ -92,7 +92,7 @@ export default function Home() {
             <h2>Long Term Finance</h2>
             <p>Finance options may be available. Call our reception team to find out more and discuss the current options.</p>
             <a href="tel:+6498372915" className="button button-outline">Call us</a>
-            <Image src="/images/finance-user.png" alt="Long term finance" width={420} height={239} className="finance-image" />
+            <Image src="/images/finance-user.png" alt="Dental finance options at White Cross Dental Henderson" width={420} height={239} className="finance-image" />
           </div>
           <div className="hours-panel">
             <span className="eyebrow">Opening hours</span>
