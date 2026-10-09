@@ -41,7 +41,7 @@ Use Node.js 20.9 or newer.
 
 ## Tracking & Search Console (Vercel environment variables)
 
-Nothing loads until these are set in Vercel → Project → Settings → Environment Variables (Production), then redeploy:
+GTM container `GTM-54T4P24V` is set in `components/Analytics.js` and loads only on dentisthenderson.co.nz (or any URL with `?gtm_debug=`, which GTM Preview adds). Optional Vercel overrides:
 
 - `NEXT_PUBLIC_GTM_ID` – Google Tag Manager container ID, e.g. `GTM-XXXXXXX`. GA4, Google Ads and Meta tags are managed inside GTM.
 - `NEXT_PUBLIC_GSC_VERIFICATION` – optional Google Search Console HTML-tag verification code (content value only).

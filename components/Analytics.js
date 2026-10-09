@@ -1,16 +1,16 @@
 'use client';
 
-import Script from 'next/script';
 import { useEffect } from 'react';
 
-const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
+// Google Tag Manager container (not secret). Can be overridden in Vercel with NEXT_PUBLIC_GTM_ID.
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID || 'GTM-54T4P24V';
+const LIVE_HOSTS = ['dentisthenderson.co.nz', 'www.dentisthenderson.co.nz'];
 
 function push(event, data) {
   window.dataLayer = window.dataLayer || [];
   window.dataLayer.push({ event, page_path: window.location.pathname, ...data });
 }
 
-// Classifies a clicked link into a lead/engagement event.
 function classify(href) {
   if (!href) return null;
   if (href.startsWith('tel:')) return 'phone_click';
@@ -20,11 +20,24 @@ function classify(href) {
   return null;
 }
 
-// Invisible: adds Google Tag Manager only when NEXT_PUBLIC_GTM_ID is set,
-// and sends dataLayer events for calls, emails, bookings and form sends.
+// Invisible. Loads GTM only on the live domain (or any URL opened by GTM
+// Preview / Tag Assistant, which adds ?gtm_debug=), so preview and local
+// builds never pollute real data. Sends dataLayer events for leads.
 export default function Analytics() {
   useEffect(() => {
-    if (!GTM_ID) return;
+    const host = window.location.hostname;
+    const debug = /[?&]gtm_debug=/.test(window.location.search);
+    if (!GTM_ID || (!LIVE_HOSTS.includes(host) && !debug)) return;
+
+    if (!window.__gtmLoaded) {
+      window.__gtmLoaded = true;
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({ 'gtm.start': Date.now(), event: 'gtm.js' });
+      const s = document.createElement('script');
+      s.async = true;
+      s.src = `https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`;
+      document.head.appendChild(s);
+    }
 
     const onClick = (e) => {
       const a = e.target.closest && e.target.closest('a[href]');
@@ -55,22 +68,5 @@ export default function Analytics() {
     };
   }, []);
 
-  if (!GTM_ID) return null;
-
-  return (
-    <>
-      <Script id="gtm" strategy="afterInteractive">
-        {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src='https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);})(window,document,'script','dataLayer','${GTM_ID}');`}
-      </Script>
-      <noscript>
-        <iframe
-          src={`https://www.googletagmanager.com/ns.html?id=${GTM_ID}`}
-          height="0"
-          width="0"
-          style={{ display: 'none', visibility: 'hidden' }}
-          title="Google Tag Manager"
-        />
-      </noscript>
-    </>
-  );
+  return null;
 }
