@@ -4,8 +4,8 @@ import PageHero from '@/components/PageHero';
 import BookingBar from '@/components/BookingBar';
 
 export const metadata = pageMeta({
-  title: 'About Us',
-  description: 'About White Cross Dental Henderson, a seven-day Accident & Emergency and general dental clinic on Lincoln Road.',
+  title: 'About Our Henderson Dental Clinic',
+  description: 'White Cross Dental Henderson is a seven-day general, emergency and ACC dental clinic at 131 Lincoln Road, Henderson, West Auckland.',
   path: '/about-us'
 });
 
@@ -26,7 +26,7 @@ export default function AboutPage() {
             </div>
           </div>
           <div className="about-image">
-            <Image src="/images/about-user.png" alt="Dental team and patient" fill sizes="(max-width:900px) 100vw, 48vw" className="cover" />
+            <Image src="/images/about-user.png" alt="Dental team with a patient at White Cross Dental Henderson" fill sizes="(max-width:900px) 100vw, 48vw" className="cover" />
           </div>
         </div>
       </section>
