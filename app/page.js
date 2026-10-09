@@ -114,6 +114,7 @@ export default function Home() {
             <span className="eyebrow">Visit us</span>
             <h2>131 Lincoln Road, Henderson</h2>
             <p>We are at 131 Lincoln Road, Henderson, Auckland 0610, right behind McDonald&apos;s.</p>
+            <p>Easy to reach from Te Atatu, New Lynn, Glen Eden, Massey and across West Auckland.</p>
             <div className="contact-links">
               <a href="tel:+6498372915">(09) 837-2915</a>
               <a href="mailto:reception@dentisthenderson.co.nz">reception@dentisthenderson.co.nz</a>
