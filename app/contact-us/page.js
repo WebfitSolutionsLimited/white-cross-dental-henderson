@@ -1,12 +1,14 @@
+import { pageMeta } from '@/lib/seo';
 import PageHero from '@/components/PageHero';
 import ContactForm from '@/components/ContactForm';
 import FacebookIcon from '@/components/FacebookIcon';
 import MinorBookingNotice from '@/components/MinorBookingNotice';
 
-export const metadata = {
+export const metadata = pageMeta({
   title: 'Contact Us',
-  description: 'Contact White Cross Dental Henderson at 131 Lincoln Road, phone (09) 837-2915. Open seven days.'
-};
+  description: 'Contact White Cross Dental Henderson at 131 Lincoln Road, phone (09) 837-2915. Open seven days.',
+  path: '/contact-us'
+});
 
 export default function ContactPage() {
   return (

@@ -1,11 +1,13 @@
+import { pageMeta } from '@/lib/seo';
 import Image from 'next/image';
 import PageHero from '@/components/PageHero';
 import BookingBar from '@/components/BookingBar';
 
-export const metadata = {
+export const metadata = pageMeta({
   title: 'Dental Services',
-  description: 'Dental services at White Cross Dental Henderson including examinations, cosmetic, surgical, root canal, restorative, ACC, dentures and general dentistry.'
-};
+  description: 'Dental services at White Cross Dental Henderson including examinations, cosmetic, surgical, root canal, restorative, ACC, dentures and general dentistry.',
+  path: '/dental-services'
+});
 
 const services = [
   {

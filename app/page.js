@@ -1,7 +1,12 @@
+import { pageMeta } from '@/lib/seo';
 import Image from 'next/image';
 import Link from 'next/link';
 import BookingBar from '@/components/BookingBar';
 import MinorBookingNotice from '@/components/MinorBookingNotice';
+
+export const metadata = {
+  alternates: pageMeta({ path: '/' }).alternates
+};
 
 const BOOKING_URL = 'https://apac.dentalhub.online/soe/new/%20?pid=NZWCH01';
 
