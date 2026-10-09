@@ -5,8 +5,8 @@ import FacebookIcon from '@/components/FacebookIcon';
 import MinorBookingNotice from '@/components/MinorBookingNotice';
 
 export const metadata = pageMeta({
-  title: 'Contact Us',
-  description: 'Contact White Cross Dental Henderson at 131 Lincoln Road, phone (09) 837-2915. Open seven days.',
+  title: 'Contact & Opening Hours',
+  description: 'Call (09) 837-2915 or visit 131 Lincoln Road, Henderson. Open 7 days: Mon–Fri 8am–7pm, Sat 8am–5pm, Sun 8am–4pm. Book online anytime.',
   path: '/contact-us'
 });
 

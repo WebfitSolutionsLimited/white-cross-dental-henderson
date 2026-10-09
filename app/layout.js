@@ -6,17 +6,17 @@ import Analytics from '@/components/Analytics';
 import { pageMeta, SITE_URL } from '@/lib/seo';
 
 const home = pageMeta({
-  description: 'Seven-day dental care in Henderson, Auckland.',
+  description: 'Henderson dentist open 7 days on Lincoln Road. Emergency and ACC dental care, check-ups, root canal, dentures and cosmetic treatment. Book online 24/7.',
   path: '/'
 });
 
 export const metadata = {
   metadataBase: new URL('https://www.dentisthenderson.co.nz'),
   title: {
-    default: 'White Cross Dental Henderson | 7 Day Dentist',
+    default: 'Dentist Henderson, Open 7 Days | White Cross Dental Henderson',
     template: '%s | White Cross Dental Henderson'
   },
-  description: 'Seven-day dental clinic on Lincoln Road, Henderson offering general dentistry, emergencies, ACC, cosmetic, surgical and endodontic treatment.',
+  description: 'Henderson dentist open 7 days on Lincoln Road. Emergency and ACC dental care, check-ups, root canal, dentures and cosmetic treatment. Book online 24/7.',
   manifest: '/site.webmanifest',
   icons: {
     icon: [
@@ -53,6 +53,26 @@ export default function RootLayout({ children }) {
       addressRegion: 'Auckland',
       postalCode: '0610',
       addressCountry: 'NZ'
+    },
+    hasMap: 'https://maps.google.com/maps?q=131%20Lincoln%20Road%2C%20Henderson%2C%20Auckland%2C%200610',
+    areaServed: [
+      { '@type': 'Place', name: 'Henderson, Auckland' },
+      { '@type': 'Place', name: 'West Auckland' }
+    ],
+    hasOfferCatalog: {
+      '@type': 'OfferCatalog',
+      name: 'Dental services',
+      itemListElement: [
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Consultation & Examination' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Emergency Dental Care' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'ACC Dental Injury Treatment' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Root Canal Treatment' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Dentures' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Oral Surgery & Extractions' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Cosmetic Dentistry' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'Restorative Dentistry' } },
+          { '@type': 'Offer', itemOffered: { '@type': 'Service', name: 'General Dentistry' } }
+      ]
     },
     openingHoursSpecification: [
       { '@type': 'OpeningHoursSpecification', dayOfWeek: ['Monday','Tuesday','Wednesday','Thursday','Friday'], opens: '08:00', closes: '19:00' },
