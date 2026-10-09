@@ -11,7 +11,7 @@ const home = pageMeta({
 });
 
 export const metadata = {
-  metadataBase: new URL('https://dentisthenderson.co.nz'),
+  metadataBase: new URL('https://www.dentisthenderson.co.nz'),
   title: {
     default: 'White Cross Dental Henderson | 7 Day Dentist',
     template: '%s | White Cross Dental Henderson'
