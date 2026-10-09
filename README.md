@@ -38,3 +38,20 @@ The current form opens a pre-addressed email in the visitor's mail client. For p
 ## Runtime
 
 Use Node.js 20.9 or newer.
+
+## Tracking & Search Console (Vercel environment variables)
+
+GTM container `GTM-54T4P24V` is set in `components/Analytics.js` and loads only on dentisthenderson.co.nz (or any URL with `?gtm_debug=`, which GTM Preview adds). Optional Vercel overrides:
+
+- `NEXT_PUBLIC_GTM_ID` – Google Tag Manager container ID, e.g. `GTM-XXXXXXX`. GA4, Google Ads and Meta tags are managed inside GTM.
+- `NEXT_PUBLIC_GSC_VERIFICATION` – optional Google Search Console HTML-tag verification code (content value only).
+
+dataLayer events pushed by `components/Analytics.js` (use as Custom Event triggers in GTM):
+
+| Event | Fires when | Extra fields |
+|---|---|---|
+| `booking_click` | Any "Book Online" (DentalHub) link is clicked | `link_url`, `link_text`, `link_location`, `page_path` |
+| `phone_click` | Any `tel:` link is clicked | same |
+| `email_click` | Any `mailto:` link is clicked | same |
+| `social_click` | Facebook link is clicked | same |
+| `contact_form_submit` | Contact form passes validation and is submitted (opens the visitor's mail app) | `form_id`, `page_path` |

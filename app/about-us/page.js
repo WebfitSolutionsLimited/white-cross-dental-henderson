@@ -1,11 +1,13 @@
+import { pageMeta } from '@/lib/seo';
 import Image from 'next/image';
 import PageHero from '@/components/PageHero';
 import BookingBar from '@/components/BookingBar';
 
-export const metadata = {
+export const metadata = pageMeta({
   title: 'About Us',
-  description: 'About White Cross Dental Henderson, a seven-day Accident & Emergency and general dental clinic on Lincoln Road.'
-};
+  description: 'About White Cross Dental Henderson, a seven-day Accident & Emergency and general dental clinic on Lincoln Road.',
+  path: '/about-us'
+});
 
 export default function AboutPage() {
   return (
