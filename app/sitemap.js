@@ -1,5 +1,5 @@
 export default function sitemap() {
-  const base = 'https://dentisthenderson.co.nz';
+  const base = 'https://www.dentisthenderson.co.nz';
   return [
     { url: base, changeFrequency: 'weekly', priority: 1 },
     { url: `${base}/about-us`, changeFrequency: 'monthly', priority: 0.7 },
