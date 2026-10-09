@@ -15,6 +15,7 @@ export default function SiteHeader() {
     ['/', 'Home'],
     ['/about-us', 'About Us'],
     ['/dental-services', 'Dental Services'],
+    ['/acc-dental-injuries', 'ACC Injuries'],
     ['/contact-us', 'Contact Us'],
   ];
 
