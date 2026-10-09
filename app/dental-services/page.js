@@ -4,8 +4,8 @@ import PageHero from '@/components/PageHero';
 import BookingBar from '@/components/BookingBar';
 
 export const metadata = pageMeta({
-  title: 'Dental Services',
-  description: 'Dental services at White Cross Dental Henderson including examinations, cosmetic, surgical, root canal, restorative, ACC, dentures and general dentistry.',
+  title: 'Dental Services in Henderson',
+  description: 'Check-ups, emergencies, ACC dental injuries, root canal, dentures, oral surgery, cosmetic and restorative dentistry in Henderson. Open 7 days.',
   path: '/dental-services'
 });
 
@@ -132,7 +132,7 @@ export default function DentalServicesPage() {
                 {service.content}
               </div>
               <div className="service-detail-image">
-                <Image src={service.image} alt={service.title} fill sizes="(max-width:900px) 100vw, 38vw" className="cover" />
+                <Image src={service.image} alt={`${service.title} at White Cross Dental Henderson`} fill sizes="(max-width:900px) 100vw, 38vw" className="cover" />
               </div>
             </article>
           ))}
